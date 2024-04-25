@@ -1,0 +1,64 @@
+def z1:
+   numbers = [1, 27, 7, 16]
+
+  user_number = int(input("Введите число:"))
+
+  if user_number in numbers:
+      print("Вы угадали число!")
+  else:
+      print("Такого числа нет! ")
+
+  print("Исходный список: ", numbers)
+  print("Число пользователя: ", user_number)
+
+def z2:
+  my_list = [5, 27, 1, 1, 3, 1, 10, 33]
+
+  unique_values = set()
+  repeated_values = set()
+
+  for num in my_list:
+    if num in unique_values:
+        repeated_values.add(num)
+    else:
+        unique_values.add(num)
+
+  if repeated_values:
+    print("Повторяющиеся элементы в списке:", repeated_values)
+  else:
+    print("В списке нет повторяющихся элементов")
+
+  print("Исходный список:", my_list)
+
+def z3:
+ days_of_week = ("Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье")
+ num_weekend = int(input("Сколько выходных дней на неделе вы хотите? "))
+ if num_weekend > len(days_of_week) -2:
+     print("Ошибка! В неделе всего 7 дней, включая выходные.")
+ else:
+     weekend_days = list(days_of_week[-num_weekend:])
+     work_days = list(days_of_week[:-num_weekend])
+     print("Ваши выходные дни:", ", ".join(weekend_days))
+     print("Ваши рабочие дни:", ", ".join(work_days))
+
+def z4:
+ group1 = ["Иванов", "Кательникова", "Сидоров", "Козловский", "Айропетов", "Квашонкин", "Малой", "Андреев", "Мерзализаде", "Качмазов"]
+ group2 = ["Аранова", "Лалаева", "Пушкин", "Иванов", "Малой", "Овечкин", "Колыбелкин", "Орлов", "Еременко", "Коваль"]
+
+ sports_team = tuple(group1[:5] + group2[:5])
+
+ print("Группа 1:", group1)
+ print("Группа 2:", group2)
+ print("Спортивная команда:", sports_team)
+
+ print("Длина кортежа:", len(sports_team))
+
+ sorted_team = tuple(sorted(sports_team))
+ print("Отсортированная команда:", sorted_team)
+
+ ivanov_count = sorted_team.count("Иванов")
+ if ivanov_count > 0:
+     print("Фамилия Иванов входит в команду.")
+     print("Количество вхождений фамилии Иванов в команду:", ivanov_count)
+ else:
+      print("Фамилия Иванов не входит в команду.")
