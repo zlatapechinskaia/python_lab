@@ -1,0 +1,16 @@
+countries_capitals = {
+    'Россия': 'Москва',
+    'Франция': 'Париж',
+    'Германия': 'Берлин',
+    'США': 'Вашингтон',
+    'Италия': 'Рим'
+}
+for country, capital in countries_capitals.items():
+    print(f"{country}: {capital}")
+
+country = 'Франция'
+print(f"Столица страны {country} - {countries_capitals[country]}")
+
+sorted_countries = sorted(countries_capitals.keys())
+for country in sorted_countries:
+    print(f"{country}: {countries_capitals[country]}")
